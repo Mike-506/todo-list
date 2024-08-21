@@ -6,7 +6,9 @@ const cors = require('cors');
 
 const router = express.Router();
 
-const db = new sqlite.Database('./server/to_do.db', sqlite.OPEN_READWRITE, (err) => {
+const dbPath = process.env.SQLITE_PATH;
+
+const db = new sqlite.Database(dbPath || './server/to_do.db', sqlite.OPEN_READWRITE, (err) => {
   if (err) return console.error(err);
 })
 

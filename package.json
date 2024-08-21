@@ -2,6 +2,7 @@
   "name": "lista-tareas",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "version": "1.0.0",
+  "homepage": "https://Mike-506.github.io/todo-list",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
@@ -20,6 +21,8 @@
     "web-vitals": "^4.2.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -48,6 +51,7 @@
   "author": "mike-506",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "nodemon": "^3.1.4"
   }
 }
